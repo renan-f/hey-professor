@@ -18,6 +18,7 @@ if [ -z "$ISSUE_ID" ]; then
 
 fi
 
+# shellcheck disable=SC2039
 if [[ $COMMIT_MESSAGE == $ISSUE_ID* ]]; then
     exit 0
 
