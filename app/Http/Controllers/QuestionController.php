@@ -18,7 +18,8 @@ class QuestionController extends Controller
                     if (!str_ends_with($value, '?')) {
                         $fail("Are you sure that is a question? It is missing the question mark in the end.");
                     }
-                }, ],
+                },
+            ],
         ]);
 
         Question::query()->create($attributes);
