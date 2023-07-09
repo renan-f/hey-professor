@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Question;
 
+use App\Http\Controllers\Controller;
 use App\Models\Question;
 use Closure;
 use Illuminate\Http\RedirectResponse;
@@ -23,7 +24,8 @@ class QuestionController extends Controller
         ]);
 
         data_set($attributes, 'draft', true);
-        Question::query()->create($attributes);
+
+        user()->questions()->create($attributes);
 
         return to_route('dashboard');
     }

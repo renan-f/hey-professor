@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{DashboardController, ProfileController, Question, QuestionController};
+use App\Http\Controllers\{DashboardController, ProfileController, Question, Question\QuestionController};
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
